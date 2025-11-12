@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>JustRight – Rhythm Game</title>
+	<meta name="description" content="JustRight – een spannend gratis online muziek spel om op een leuk rythme de juiste letters te klikken." />
+	<meta name="keywords" content="rhythm game, piano tiles, browser game, p5.js, casual game" />
+	<meta name="author" content="Zane Peeters" />
+	<link rel="manifest" href="manifest.json" />
+	<link rel="icon" href="icons/icon-512.png" />
+	<meta name="theme-color" content="#242020" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+	<main>
+		<h1>JustRight – Rhythm Game</h1>
+
+		<div id="start-screen">
+			<h2>Welkom bij JustRight</h2>
+			<button id="start">START</button>
+		</div>
+
+		<div id="game-wrapper" style="opacity:0;">
+			<div class="controls">
+				<select id="difficulty">
+					<option value="easy">easy</option>
+					<option value="medium">medium</option>
+					<option value="hard">hard</option>
+				</select>
+				<button id="pause">PAUSE</button>
+				<score-display id="score"></score-display>
+				<combo-display id="combo"></combo-display>
+				<p id="lives">LIVES: 3</p>
+				<p id="time">TIME: 0</p>
+			</div>
+			<div id="game-container"></div>
+		</div>
+
+		<div id="end-screen" style="display:none; text-align:center;">
+			<h2 id="end-message"></h2>
+			<button id="restart">Restart</button>
+		</div>
+
+		<div id="best-score">High Score: 0</div>
+
+		<article>
+			<h2>Waarom heb ik Tone.js weg gehaald?</h2>
+			<p>Oorspronkelijk wilde ik Tone.js gebruiken om JustRight leuker te maken met muziek, geluidseffecten en een dynamische beat.</p>
+			<p>Dit is spijtig genoeg niet gelukt en liep ik non-stop foutmeldingen tegen.</p>
+			<p>Ik heb dan de keuze gemaakt om inplaats van tone.js te gebruiken, mijn game website goed te maken voor de SEO regels. Dat is ook de reden dat dit de perfecte online music game is dat zeer interactief is.</p>
+			<p>Dat is ook de reden dat de keywords in engels zijn aangezien dat beter is voor de SEO optimization.</p>
+		</article>
+	</main>
+
+	<script src="game.js"></script>
+</body>
+</html>
